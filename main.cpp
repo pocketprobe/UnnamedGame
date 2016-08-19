@@ -17,12 +17,13 @@ using std::endl;
 int main()
 {
     int day = 0;
+    cout << "\t Unnamed Game Function Test" << endl;
+    cout << "Only the clock library is partially implemented." << endl;
+    cout << "Please enter a day of the year and the system will figure it out." << endl;
     do
     {
-        cout << "Today is " << getnameofday(day) << " " << getnameofmonth(day) << " " << getdayofmonth(day) << endl;
-        cout << "Change Day? ";
         cin >> day;
-        cout << endl;
+        cout << getfulldate(day) << endl;
     }while( day != -1);
     return 0;
 }

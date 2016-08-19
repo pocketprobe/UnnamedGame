@@ -22,6 +22,7 @@ using std::cout;
 using std::cin;
 using std::string;
 using std::endl;
+using std::to_string;
 
 /*
  * Let's name our funtions here.
@@ -30,6 +31,7 @@ using std::endl;
 string getnameofmonth(int day);
 int getdayofmonth(int day);
 string getnameofday(int day);
+string getfulldate(int day);
 
 /*
  * This one does what the name says on the tin.
@@ -75,4 +77,14 @@ string getnameofday(int day)
 {
     const string daysofweek[7] { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
     return daysofweek[day % 7];
+}
+
+/*
+ * This one gets us a full string to assemble for a day.
+ * Havint it as one function will make for cleaner code in the future.
+ */
+string getfulldate(int day)
+{
+    string str = getnameofday(day) + ", " + getnameofmonth(day) + " " + to_string(getdayofmonth(day));
+    return str;
 }
