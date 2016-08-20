@@ -7,7 +7,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "lib/clock.hpp" //FIXME: Makefile and a search path.
+#include "lib/clock.hpp" //TODO: Makefile and a search path.
 
 using std::cout;
 using std::cin;
@@ -19,7 +19,7 @@ int main()
     int day = 0;
     cout << "\t Unnamed Game Function Test" << endl;
     cout << "Only the clock library is partially implemented." << endl;
-    cout << "Please enter a day of the year and the system will figure it out." << endl;
+    cout << "Please enter a day and the system will return a Month, Day, and Year" << endl;
     do
     {
         cin >> day;
